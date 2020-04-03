@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-home
+    {% if response %}
+        {% if response == 'error' %}
+            <p>Error, try again</p>
+        {% else %}
+            {% for key, value in response.items %}
+                <p>{{key}}: {{value}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endif %}
 {% endblock content %}
