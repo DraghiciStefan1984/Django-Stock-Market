@@ -11,12 +11,12 @@
             <p>Error, try again</p>
         {% else %}
            <h2>{{response.companyName}}</h2>
-           <p>Price: {{response.latestPrice}}</p>
-           <p>Previous Close: {{response.previousClose}}</p>
-           <p>Market Cap.: {{response.marketCap}}</p>
-           <p>YTD Change: {{response.ytdChange}}</p>
-           <p>52w High: {{response.week52High}}</p>
-           <p>52w Low: {{response.week52Low}}</p>
+           <p>Price: {{response.latestPrice}}$</p>
+           <p>Previous Close: {{response.previousClose}}$</p>
+           <p>Market Cap.: {{formatted_market_cap}}B$</p>
+           <p>YTD Change: {{response.ytdChange}}%</p>
+           <p>52w High: {{response.week52High}}$</p>
+           <p>52w Low: {{response.week52Low}}$</p>
         {% endif %}
     {% endif %}
 {% endblock content %}
